@@ -1,12 +1,13 @@
 {
   "domain": "filter_ex",
-  "name": "Filter Ex",
+  "name": "Filter Extended",
   "version": "2025.10.04",
-  "documentation": "https://github.com/1iverea9er/filter_ex",
+  "documentation": "https://github.com/1iverea9er/Filter-Extended",
   "dependencies": [],
   "codeowners": ["@1iverea9er"],
   "requirements": [],
   "iot_class": "calculated",
   "integration_type": "hub"
 }
+
 
