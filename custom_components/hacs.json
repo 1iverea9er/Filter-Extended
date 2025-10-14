@@ -1,7 +1,8 @@
 {
-  "name": "Filter Ex",
+  "name": "Filter Extended",
   "content_in_root": false,
   "domains": ["filter_ex"],
-  "country": "any",
-  "homeassistant": "2024.6.0"
+  "homeassistant": "2024.6.0",
+  "render_readme": true
 }
+
