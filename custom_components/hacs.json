@@ -1,8 +1,11 @@
 {
   "name": "Filter Extended",
   "content_in_root": false,
-  "domains": ["filter_ex"],
+  "country": "GB",
+  "domains": ["sensor"],
   "homeassistant": "2024.6.0",
+  "iot_class": "local_polling"
   "render_readme": true
 }
+
 
