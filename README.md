@@ -1,32 +1,38 @@
-Filter Ex — Extended Filter Sensor for Home Assistant
+# Filter Ex — Extended Filter Sensor for Home Assistant
 
-Modified and backward-compatible version of the built-in filter integration.
-Fixes critical behavioral limitations of the original component and extends its functionality.
+**Filter Ex** is a modified and backward-compatible version of the built-in `filter` integration.  
+It fixes critical issues and extends functionality for time-based filtering.
 
-Key Fixes and Improvements
+---
 
-Startup fix:
-Resolves issue where the filtered sensor remained unknown after Home Assistant restart until new source updates arrived.
-Filter Ex now restores its previous filtered value immediately after startup.
+## 🧩 Key Fixes and Improvements
 
-Time-based filter reliability:
-Correct handling of time-dependent filters (SMA, EMA) based on unevenly spaced data following Eckner’s algorithm.
-Filters now correctly converge to the source sensor when its value stabilizes.
+### ✅ Startup Behavior
+- Fixes the issue where the filtered sensor remained `unknown` after Home Assistant restart until the source entity updated.  
+- The previous filtered value is now restored immediately after startup.
 
-Forced update mechanism (max_sub_interval):
-Adds optional configuration parameter for time-based filters.
-Ensures regular refresh of the filter output even when the source value remains constant, preventing stale states.
-Omission of this parameter preserves the exact behavior of the original integration.
+### 🕒 Time-Based Filter Reliability
+- Correct handling of **time-dependent filters** (SMA, EMA) for **unevenly spaced data**, following *Eckner’s algorithm*.  
+- Filters now properly converge to the source sensor value when the input stabilizes.
 
-Installation (via HACS)
+### 🔁 Forced Update Mechanism (`max_sub_interval`)
+- Adds an **optional** configuration parameter for time-dependent filters.  
+- Ensures regular forced updates even when the source value does not change, preventing stale output.  
+- When omitted, behavior is **identical to the original integration**.
 
-Add this repository as a custom repository in HACS.
+---
 
-Search for Filter Ex and install it.
+## ⚙️ Installation (via HACS)
 
-Restart Home Assistant.
+1. Add this repository as a **custom repository** in HACS.  
+2. Search for **Filter Ex** and install it.  
+3. Restart Home Assistant.
 
-Example Configuration
+---
+
+## 🧾 Example Configuration
+
+```yaml
 sensor:
   - platform: filter_ex
     name: "EXP Temp filtered ex"
@@ -36,7 +42,3 @@ sensor:
         window_size: "01:00"
         precision: 2
         max_sub_interval: "00:10:00"
-
-
-When max_sub_interval is defined, the sensor performs a forced refresh every 10 minutes even if the source value remains unchanged.
-If omitted, the integration behaves identically to the original filter platform.
