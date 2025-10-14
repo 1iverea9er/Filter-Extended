@@ -1,9 +1,12 @@
 {
   "domain": "filter_ex",
-  "name": "Filter (Extended)",
+  "name": "Filter Ex",
   "version": "2025.10.04",
-  "documentation": "https://www.home-assistant.io/integrations/filter/",
+  "documentation": "https://github.com/1iverea9er/filter_ex",
   "dependencies": [],
-  "codeowners": [],
-  "requirements": []
+  "codeowners": ["@1iverea9er"],
+  "requirements": [],
+  "iot_class": "calculated",
+  "integration_type": "hub"
 }
+
