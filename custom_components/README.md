@@ -21,7 +21,7 @@ It fixes [#154014](https://github.com/home-assistant/core/issues/154014#issuecom
 ## ⚙️ Installation (via HACS)
 
 1. Add this repository as a **custom repository** in HACS.  
-2. Search for **filter (Extended)** and install it.  
+2. Search for **Filter Extended** and install it.  
 3. Restart Home Assistant.
 
 ---
@@ -38,3 +38,4 @@ sensor:
       - filter: time_simple_moving_average
         window_size: "01:00"
         precision: 2
+
