@@ -1,0 +1,9 @@
+{
+  "domain": "filter_ex",
+  "name": "Filter (Extended)",
+  "version": "2025.10.04",
+  "documentation": "https://www.home-assistant.io/integrations/filter/",
+  "dependencies": [],
+  "codeowners": [],
+  "requirements": []
+}

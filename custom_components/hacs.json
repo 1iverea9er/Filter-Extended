@@ -1,0 +1,7 @@
+{
+  "name": "Filter Ex",
+  "content_in_root": false,
+  "domains": ["filter_ex"],
+  "country": "any",
+  "homeassistant": "2024.6.0"
+}
