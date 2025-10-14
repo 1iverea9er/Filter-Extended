@@ -33,7 +33,7 @@ sensor:
   - platform: filter_ex
     name: "Temperature filtered"
     entity_id: sensor.temperature_source
-	  max_sub_interval: "00:10:00"
+    max_sub_interval: "00:10:00"
     filters:
       - filter: time_simple_moving_average
         window_size: "01:00"
