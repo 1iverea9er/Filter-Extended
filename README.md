@@ -1,7 +1,7 @@
 # Extended Filter Sensor for Home Assistant
 
-**Filter Ex** is a modified and backward-compatible version of the built-in `filter` integration.  
-It fixes critical issues and extends functionality for time-based filtering.
+**Filter Ex** is a modified and backward-compatible version of the built-in [`filter`](https://www.home-assistant.io/integrations/filter) integration.  
+It fixes [#154014](https://github.com/home-assistant/core/issues/154014#issuecomment-3388830668) and extends functionality for time-based filtering.
 
 ---
 
