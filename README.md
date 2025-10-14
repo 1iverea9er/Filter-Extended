@@ -1,4 +1,4 @@
-# Filter Ex — Extended Filter Sensor for Home Assistant
+# Extended Filter Sensor for Home Assistant
 
 **Filter Ex** is a modified and backward-compatible version of the built-in `filter` integration.  
 It fixes critical issues and extends functionality for time-based filtering.
@@ -6,10 +6,6 @@ It fixes critical issues and extends functionality for time-based filtering.
 ---
 
 ## 🧩 Key Fixes and Improvements
-
-### ✅ Startup Behavior
-- Fixes the issue where the filtered sensor remained `unknown` after Home Assistant restart until the source entity updated.  
-- The previous filtered value is now restored immediately after startup.
 
 ### 🕒 Time-Based Filter Reliability
 - Correct handling of **time-dependent filters** (SMA, EMA) for **unevenly spaced data**, following *Eckner’s algorithm*.  
@@ -35,10 +31,10 @@ It fixes critical issues and extends functionality for time-based filtering.
 ```yaml
 sensor:
   - platform: filter_ex
-    name: "EXP Temp filtered ex"
-    entity_id: sensor.exp_temp_source
+    name: "Temperature filtered"
+    entity_id: sensor.temperature_source
+	  max_sub_interval: "00:10:00"
     filters:
       - filter: time_simple_moving_average
         window_size: "01:00"
         precision: 2
-        max_sub_interval: "00:10:00"
